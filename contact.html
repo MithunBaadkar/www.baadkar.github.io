@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>ContactMe</title>
+    <link rel="stylesheet" href="css/contactme.css">
+</head>
+<body>
+    <div class="background">
+        <h3>HI HOW CAN I HELP U?</h3>
+        <h1 class="head">Welcome <br> to my contact page</h1>
+        <p>U can enter here. Its fun this is model page  </p>
+    <div class="hero">
+        
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Enter Name" required>
+            <input type="email" name="Email" placeholder="Enter Email Id" required>
+            <textarea name="Message" id="message" rows="4" placeholder="Your Message" ></textarea>
+            <button type="submit"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10C26.0444 10 22.1776 11.173 18.8886 13.3706C15.5996 15.5682 13.0362 18.6918 11.5224 22.3463C10.0087 26.0009 9.61259 30.0222 10.3843 33.9018C11.156 37.7814 13.0608 41.3451 15.8579 44.1421C18.6549 46.9392 22.2186 48.844 26.0982 49.6157C29.9778 50.3874 33.9991 49.9913 37.6537 48.4776C41.3082 46.9638 44.4318 44.4004 46.6294 41.1114C48.827 37.8224 50 33.9556 50 30C50 24.6957 47.8929 19.6086 44.1421 15.8579C40.3914 12.1071 35.3043 10 30 10V10ZM39.825 23.7L36.55 39.175C36.3 40.275 35.65 40.525 34.725 40.025L29.725 36.325L27.225 38.65C27.1073 38.8038 26.956 38.9288 26.7827 39.0155C26.6095 39.1021 26.4187 39.1481 26.225 39.15L26.575 34.15L35.825 25.775C36.25 25.425 35.825 25.225 35.225 25.575L23.875 32.7L18.875 31.15C17.8 30.825 17.775 30.075 19.1 29.575L38.375 22.075C39.325 21.8 40.125 22.35 39.825 23.7V23.7Z" fill="black"/>
+                </svg>
+                </button>
+        </form>
+    </div>
+</div>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyT7njqTI_N70zLdNcjcn4sHn6g1JPbNGQP95TyBuwpzUtoM0dtQH3Q0XqHT8Axv5rMw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

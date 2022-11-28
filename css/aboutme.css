@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@400;600&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Tourney','sans-serif';
+    background-color: rgb(0, 0, 0);
+    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Tourney';
+    color: white;
+}
+.pera1{
+    color: white;
+    text-decoration: none;
+}
+p{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.social{
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iconssay{
+    text-align: center;
+    font-size: 40px;
+}
+
+@media(min-width:700px){
+    .hero-img{
+        width:30%;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .hero{
+        font-size: 50px;
+        font-weight: 600;
+        padding-left: 10%;
+    }
+}
+
+@media(max-width:700px){
+    .hero-img{
+        width:100% ;
+        border-radius: 50%;
+        
+    }
+    
+}
